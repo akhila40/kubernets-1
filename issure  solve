@@ -1,0 +1,29 @@
+It looks like you’ve successfully installed Minikube, but you’re encountering a “command not found” issue. Let’s address this step by step:
+
+Path Issue: The error message indicates that the minikube command is not found. This could be due to the location of the Minikube executable in your system.
+Verify Path: First, let’s check if Minikube is in your system’s path. Run the following command:
+which minikube
+If it doesn’t return anything, we’ll need to adjust the path.
+Move Minikube Executable: Since you’ve installed Minikube using Homebrew, it should be located in /usr/local/Cellar/minikube/1.5.2/bin/minikube. To make it accessible system-wide, move it to /usr/local/bin:
+sudo mv /usr/local/Cellar/minikube/1.5.2/bin/minikube /usr/local/bin/
+
+Verify Again: Now check if Minikube is in your path:
+which minikube
+
+Restart Terminal: Sometimes, restarting your terminal session is necessary for the changes to take effect. Close and reopen your terminal or run:
+source ~/.bashrc
+
+Test Minikube Version: Finally, verify that Minikube is working:
+minikube version
+
+This should resolve the “command not found” issue, and you’ll be able to use Minikube. Let me know if you encounter any further issues! 😊 12
+
+
+commands
+which minikube
+Since you’ve installed Minikube using Homebrew, it should be located in /usr/local/Cellar/minikube/1.5.2/bin/minikube. To make it accessible system-wide, move it to /usr/local/bin:
+sudo mv /usr/local/Cellar/minikube/1.5.2/bin/minikube /usr/local/bin/
+which minikube
+source ~/.bashrc
+minikube version
+
